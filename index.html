@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carta Digital Interactiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="Imagenes/lOGO.png" alt="Logo de la Empresa" class="logo">
+    </div>
+    <div class="search-wrapper">
+      <div class="search-container">
+        <svg class="search-icon" viewBox="0 0 24 24">
+          <path fill="white" d="M9.5 3a6.5 6.5 0 0 1 5.2 10.4l4.15 4.15a1 1 0 1 1-1.42 1.42l-4.15-4.15A6.5 6.5 0 1 1 9.5 3m0 2a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9z" />
+        </svg>
+        <input type="text" id="searchInput" placeholder="¿Qué se te antoja...?" class="search-input">
+      </div>
+    </div>
+  </header>
+
+  <!-- VISTA INICIAL: SLIDER + CATEGORÍAS -->
+  <div id="homeView" class="view active">
+    <section class="promo-slider">
+      <button class="slide-btn left" onclick="slidePromos(-1)">❮</button>
+      <div class="promo-container" id="promoContainer"></div>
+      <button class="slide-btn right" onclick="slidePromos(1)">❯</button>
+    </section>
+
+    <nav id="categoryButtons"></nav>
+  </div>
+
+  <!-- VISTA DE PLATOS -->
+  <main id="menuView" class="view"></main>
+
+  <!-- VISTA DETALLE DE PLATO -->
+  <section id="dishDetailView" class="view">
+    <button onclick="goBackToMenu()" class="back-btn">⬅ Volver</button>
+    <div class="dish-detail-container">
+      <img id="detailImage" alt="Plato" />
+      <h2 id="detailName"></h2>
+      <p id="detailDescription"></p>
+      <p id="detailPrice"></p>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="dishDetails" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeDishDetails()">&times;</span>
+      <h2 id="dishName"></h2>
+      <img id="dishImage" src="" alt="" />
+      <p id="dishDescription"></p>
+      <p id="dishPrice"></p>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="scripts.js"></script>
+</body>
+</html>
