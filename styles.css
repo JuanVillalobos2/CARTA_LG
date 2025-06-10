@@ -333,9 +333,15 @@ nav button:hover {
 }
 
 .dish-detail-container p {
-  font-size: 20px;
-  margin: 12px 0;
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ff5500;
+}
+
+#detailPrice {
+  font-size: 22px;
   color: #802434;
+  font-weight: bold;
 }
 
 .back-btn {
