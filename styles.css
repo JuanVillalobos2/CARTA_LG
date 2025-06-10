@@ -333,8 +333,9 @@ nav button:hover {
 }
 
 .dish-detail-container p {
-  font-size: 18px;
-  margin: 10px 0;
+  font-size: 20px;
+  margin: 12px 0;
+  color: #802434;
 }
 
 .back-btn {
